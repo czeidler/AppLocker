@@ -17,12 +17,13 @@
     </PreferenceCategory>
     <PreferenceCategory
     	android:title="General">
-    	<EditTextPreference
-    		android:key="password"
-    		android:title="Edit Password"
-    		android:summary="Edit the Unlock password"
-    		android:inputType="number"
-    	/>
+        <com.gueei.applocker.PasswordPreference
+            android:key="password"
+            android:title="Edit Password"
+            android:summary="Edit the Unlock password"
+            android:inputType="numberPassword"
+            android:password="true"
+            />
     	<CheckBoxPreference
     		android:key="relock_policy"
     		android:title="Relock Policy"
