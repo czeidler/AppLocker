@@ -2,15 +2,14 @@ package com.gueei.applocker;
 
 import android.app.AlertDialog;
 import android.content.Context;
-import android.os.Build;
 import android.preference.DialogPreference;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.AttributeSet;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.ViewParent;
 import android.widget.EditText;
-import android.widget.GridLayout;
 import android.widget.LinearLayout;
 
 
@@ -41,8 +40,17 @@ public class PasswordPreference extends DialogPreference {
         confirmEditText.setId(11);
     }
 
+    private void detachView(View view, View newParent) {
+        ViewParent oldParent = view.getParent();
+        if (oldParent != newParent && oldParent != null)
+            ((ViewGroup)oldParent).removeView(view);
+    }
+
     @Override
     public void onBindDialogView(View view) {
+        detachView(passwordEditText, view);
+        detachView(confirmEditText, view);
+
         LinearLayout layout = (LinearLayout)view.findViewById(R.id.linearLayout);
         layout.addView(passwordEditText);
         layout.addView(confirmEditText);
