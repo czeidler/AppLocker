@@ -8,31 +8,22 @@
 package com.gueei.applocker;
 
 import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
-import java.util.Iterator;
-import java.util.List;
-import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import android.app.ActivityManager;
-import android.app.ActivityManager.RunningAppProcessInfo;
-import android.app.ActivityManager.RunningServiceInfo;
 import android.app.ActivityManager.RunningTaskInfo;
 import android.app.Notification;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.app.Service;
-import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.PackageManager.NameNotFoundException;
 import android.os.IBinder;
-import android.util.Log;
 
 public class DetectorService extends Service {
 	public static final String ACTION_DETECTOR_SERVICE = "com.gueei.detector.service";
