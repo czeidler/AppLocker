@@ -1,0 +1,29 @@
+# build files
+out/*
+build/*
+gen/*
+bin/*
+
+# IDEA project files
+.idea/workspace.xml
+.idea/build.xml
+.idea/local.properties
+.idea/Project_Default.xml
+.idea/copyright/profiles_settings.xml
+.idea/libraries/*
+.idea/vcs.xml
+.idea/*
+
+.gradle/*
+
+
+# other files
+ant.properties
+proguard-project.txt
+*.apk
+*.hprof
+*.jar
+*.bc
+
+# dolphin (KDE file manager)
+.directory
