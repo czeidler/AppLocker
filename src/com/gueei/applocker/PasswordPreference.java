@@ -36,8 +36,6 @@ public class PasswordPreference extends DialogPreference {
         passwordEditText = new EditText(context, attrs);
         confirmEditText = new EditText(context, attrs);
 
-        passwordEditText.setId(10);
-        confirmEditText.setId(11);
     }
 
     private void detachView(View view, View newParent) {
